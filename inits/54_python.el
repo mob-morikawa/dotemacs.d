@@ -1,7 +1,7 @@
 ;;python mode
 
 ;; memo
-;; you must install python, pip, jedi and epc.
+;; must install python, pip, jedi and epc.
 ;; install your machine for pre-library,
 ;; emacs-jedi will run.
 
