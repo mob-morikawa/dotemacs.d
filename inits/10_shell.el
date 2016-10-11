@@ -13,7 +13,6 @@
 (setq explicit-shell-file-name shell-file-name)
 
 (require 'multi-term)
-;; (require 'key-intercept nil t)
 (setq multi-term-program shell-file-name)
 
 (global-set-key (kbd "C-M-t") 'multi-term)
@@ -48,11 +47,4 @@
 
 
 
-;; (require 'term+)
-;; (require 'xterm-256color)
-;; (require 'term+mux)
-;; (global-set-key (kbd "C-M-t") 'multi-term)
 
-;; (require 'key-intercept nil t)
-;; ;; コマンドの後の引数は, キー単体の入力だと判断するまでの時間(秒)
-;; (define-intercept-key (kbd "ESC") 'yet-another-command 0.01)

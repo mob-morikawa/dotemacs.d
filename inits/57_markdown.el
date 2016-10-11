@@ -1,5 +1,3 @@
-(setq markdown-css-paths (list "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css") )
-
 ;; markdown mode
 ;; markdownモード（gfm-mode Github flavor markdown mode）を拡張子と関連付けする
 (autoload 'markdown-mode "markdown-mode"

@@ -11,3 +11,4 @@ ac-comphist.dat
 auto-save-list/*
 tags/*
 tramp
+*.elc

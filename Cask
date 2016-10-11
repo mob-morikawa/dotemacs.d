@@ -41,3 +41,8 @@
 (depends-on "go-eldoc")
 (depends-on "jedi")
 (depends-on "helm-gtags")
+
+(depends-on "ansible")
+(depends-on "yaml-mode")
+
+(depends-on "markdown-mode")
