@@ -46,3 +46,7 @@
 (depends-on "yaml-mode")
 
 (depends-on "markdown-mode")
+
+(depends-on "magit-gh-pulls")
+
+(depends-on "neotree")
