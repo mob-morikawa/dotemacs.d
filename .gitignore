@@ -12,3 +12,5 @@ auto-save-list/*
 tags/*
 tramp
 *.elc
+var/pcache/cache
+%backup%*
