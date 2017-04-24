@@ -43,6 +43,7 @@
 (depends-on "helm-gtags")
 
 (depends-on "ansible")
+(depends-on "ansible-vault")
 (depends-on "yaml-mode")
 
 (depends-on "markdown-mode")
@@ -50,3 +51,8 @@
 (depends-on "magit-gh-pulls")
 
 (depends-on "neotree")
+(depends-on "sql-indent")
+
+(depends-on "csharp-mode")
+
+(depends-on "apache-mode")

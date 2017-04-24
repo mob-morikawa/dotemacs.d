@@ -10,3 +10,8 @@
 
 ;;(require 'w3m) 
 (setq inhibit-startup-message t)
+
+;;(global-hl-line-mode t)                   ;; 現在行をハイライト
+(show-paren-mode t)                       ;; 対応する括弧をハイライト
+(setq show-paren-style 'expression)            ;; 括弧のハイライトの設定。
+(transient-mark-mode t)                   ;; 選択範囲をハイライト
