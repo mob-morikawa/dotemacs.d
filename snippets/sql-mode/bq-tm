@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bq-tm
+# key: bq
+# --
+DATE_TRUNC(DATE(TIMESTAMP(`created_at`, 'Asia/Tokyo')), DAY) AS created_at,
