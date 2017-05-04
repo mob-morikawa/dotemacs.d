@@ -27,7 +27,6 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 
-(depends-on "pallet")
 (depends-on "init-loader")
 
 (depends-on "ag")
@@ -56,3 +55,13 @@
 (depends-on "csharp-mode")
 
 (depends-on "apache-mode")
+(depends-on "bash-completion")
+(depends-on "mozc")
+(depends-on "all")
+(depends-on "multi-term")
+(depends-on "key-chord")
+(depends-on "scratch-log")
+(depends-on "browse-kill-ring")
+(depends-on "persp-mode")
+(depends-on "go-autocomplete")
+(depends-on "session")

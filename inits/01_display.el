@@ -7,8 +7,8 @@
       ((string-match "linux" system-configuration)        ;; Linux
 
        (set-face-attribute 'default nil
-       			   :family "Ricty Diminished"
-       			   :height 140)
+       			   :family "Myrica"
+       			   :height 150)
        )
       ((string-match "dos" system-configuration)        ;; windows
        ;; (set-face-attribute 'default nil
@@ -16,7 +16,7 @@
        ;; 			   :height 100 )
        )
       ((string-match "freebsd" system-configuration)      ;; FreeBSD
-       (message "%s" , "bsd")
+        (message "%s" , "bsd")
        )
       )
 
