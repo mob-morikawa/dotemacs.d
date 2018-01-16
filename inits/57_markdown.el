@@ -16,14 +16,42 @@
 (add-hook 'markdown-mode-hook '(lambda() (markdown-custom)))
 
 
-(defun markdown-preview-by-eww ()
-  (interactive)
-  (message (buffer-file-name))
-  (call-process "grip" nil nil nil
-                (buffer-file-name)
-                "--export"
-                "/tmp/grip.html")
-  (let ((buf (current-buffer)))
-    (eww-open-file "/tmp/grip.html")
-    (switch-to-buffer buf)
-    (pop-to-buffer "*eww*")))
+(setq markdown-command "jq --slurp --raw-input '{\"text\": \"\\(.)\", \"mode\": \"gfm\"}' | curl -sS --data @- https://api.github.com/markdown")
+
+(require 'page-ext)
+(add-hook 'markdown-mode-hook
+          '(lambda ()
+             (setq page-delimiter "^## ")
+             (define-key markdown-mode-map (kbd "M-p") 'previous-page)
+             (define-key markdown-mode-map (kbd "M-n") 'next-page)
+            ))
+
+;; M-n	次のスライド
+;; M-p	前のスライド
+;; C-x n w	スライド表示の解除
+;; C-c C-x TAB	画像の表示
+
+
+;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;;(define-key markdown-mode-map (kbd "\C-c \C-c \C-e") 'markdown-export)
+(require 'w3m)
+(define-key markdown-mode-map (kbd "\C-c \C-c \C-v")
+  (lambda ()
+    (interactive)
+    (setq html-file-name (concat (file-name-sans-extension (buffer-file-name)) ".html"))
+    (markdown-export html-file-name)
+    (if (one-window-p) (split-window))
+    (other-window 1)
+    (w3m-find-file html-file-name)))
+
+;; (defun markdown-preview-by-eww ()
+;;   (interactive)
+;;   (message (buffer-file-name))
+;;   (call-process "grip" nil nil nil
+;;                 (buffer-file-name)
+;;                 "--export"
+;;                 "/tmp/grip.html")
+;;   (let ((buf (current-buffer)))
+;;     (eww-open-file "/tmp/grip.html")
+;;     (switch-to-buffer buf)
+;;     (pop-to-buffer "*eww*")))

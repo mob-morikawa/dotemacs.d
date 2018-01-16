@@ -16,3 +16,5 @@ var/pcache/cache
 %backup%*
 eshell/lastdir
 eshell/history
+recentf
+network-security.data

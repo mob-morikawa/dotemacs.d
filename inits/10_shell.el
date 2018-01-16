@@ -1,16 +1,16 @@
-(exec-path-from-shell-initialize)
+;; (exec-path-from-shell-initialize)
 
-(defun skt:shell ()
-  (or (executable-find "bash")
-      (executable-find "zsh")
-      (executable-find "cmdproxy")
-      (error "can't find 'shell' command in PATH!!")))
+;; (defun skt:shell ()
+;;   (or (executable-find "bash")
+;;       (executable-find "zsh")
+;;       (executable-find "cmdproxy")
+;;       (error "can't find 'shell' command in PATH!!")))
 
 
-;; Shell 名の設定 要調整
-(setq shell-file-name (skt:shell))
-(setenv "SHELL" shell-file-name)
-(setq explicit-shell-file-name shell-file-name)
+;; ;; Shell 名の設定 要調整
+;; (setq shell-file-name (skt:shell))
+;; (setenv "SHELL" shell-file-name)
+;; (setq explicit-shell-file-name shell-file-name)
 
 (require 'multi-term)
 (setq multi-term-program shell-file-name)
