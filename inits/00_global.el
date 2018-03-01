@@ -4,6 +4,10 @@
 (set-default-coding-systems 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
+;;disable backup
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 (require 'server)
 (unless (server-running-p)
   (server-start))
